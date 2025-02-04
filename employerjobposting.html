@@ -1,0 +1,374 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Match</title>
+    <link rel="stylesheet" href="css/jobposting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    
+}
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+.info {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    width: 1300px; /* Set a maximum width for the container */
+    height:30spx;
+    margin: 0px auto; /* Center the container horizontally */
+    background-color: #03346E; /* White background for the content */
+    padding: 35px; /* Padding inside the container */
+    margin-left: -40px;
+    text-align: center;
+   
+}
+
+.image {
+    width: 180px; /* Set the width of the image */
+    height: 180px;
+    border-radius: 80px; /* Rounded corners for the image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text {
+    flex: 1; /* Allow the text to take the remaining space */
+}
+
+h1 {
+    margin-top: 0;/* Remove top margin for the heading */
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    padding: 0px;
+}
+
+
+p {
+    line-height: 1.6; /* Improve readability */
+}
+
+.previousjobs{
+    text-align: left;
+    font-size: 20px;
+    margin: 30px;
+}
+
+
+.my-button {
+    background-color: #1e2654; /* Button background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 20px 40px; /* Some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 50px; /* Add some margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+    max-height: 125px;
+   
+ 
+}
+
+.my-button i {
+    font-size: 24px; /* Increase the size of the icon */
+    display: block; /* Make the icon a block element to position it above the text */
+    margin-bottom: 5px; /* Add some space between the icon and the text */
+}
+
+.my-button:hover {
+    background-color: #506e92; /* Darker background on hover */
+}
+
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    gap: 15px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    margin: 1000px 2000px; /* Increased margin above and below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+
+.form-container button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px; /* Padding inside button */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.form-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.content {
+    padding: 20px; /* Padding for the main content */
+    flex: 1; /* Allow content to grow and fill available space */
+    display: flex; /* Use flexbox for the content */
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 20px; /* Space between cards */
+    width: 100%;
+        }
+
+.card {
+    background: white; /* Background color for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+    padding: 20px; /* Padding inside the card */
+    width: 300px; /* Set width to 80% */
+    max-width: 300px; /* Maximum width for each card */
+    text-align: left; /* Align text to the left */
+    margin-left: -600px; /* Align card to the left */
+    transition: transform 0.2s; /* Transition effect */
+    margin: 0;
+ }
+
+ .card .previous-button {
+            background-color: #66b4c2; /* Default for no-button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Space between buttons */
+            margin-top: auto;
+        }
+
+        .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.navbar {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #03346E; /* Dark background */
+    width: 100%; /* Make the navbar full width */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for the list */
+    font-size: 20px;
+}
+
+.navbar li {
+    margin-left: 20px; /* Add space between items */
+}
+
+.navbar li a {
+    display: block; /* Make the link fill the list item */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar li a:hover {
+    background-color: #ddd; /* Change background on hover */
+    color: black; /* Change text color on hover */
+}
+.footer {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer {
+            background-color: #03346E;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer .container {
+            max-width: 1200px;
+            margin: 10px auto;
+            padding: 0 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .social-links a:hover {
+            text-decoration: underline;
+        }
+        </style>
+<body>
+
+    <div class="info">
+   
+        <div class="text">
+            <h1>Welcome to Your Employer Workspace</h1>
+        </div>  
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adminlogin.html">Admin-Login</a></li>
+        </ul>
+    </nav>
+        <main class="content">
+            <div class="card">
+                <h2>Previous Jobs Posted</h2>
+                <p>By clicking here you will be able to see your previous post, both approved and pending.</p>
+                <a href="previousjobs.html" class="previous-button">Click Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Student Applicants</h2>
+            <p>By clicking here you will be able to see possible students to hire for positions in your workplace.</p>
+            <a href="possiblestudent.html" class="previous-button">Click Now</a>
+
+        </div>
+           
+
+   
+    <button class="my-button" id="openFormButton">
+        <i class="fas fa-plus"></i><br>Make A Post
+    </button>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup" id="popup">
+            <span class="close" id="closePopup">&times;</span>
+            <h2>Create Job Posting</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <br>
+                <br>
+                <input type="text" placeholder="Your Email" required>
+                <br>
+                <br>
+                <textarea placeholder="Description" rows="4" required></textarea>
+                <br>
+                <br>
+                <input type="text" placeholder="Location" required>
+                <br>
+                <br>
+                <input type="text" placeholder="Pay" required>
+                <br>
+                <br>
+                <input type="text" placeholder="Job Type" required>
+                <br>
+                <br>
+                <input type="text" placeholder="Shift and Schedule" required>
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; CareerMatch. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // JavaScript to handle button click and form display
+        document.addEventListener('DOMContentLoaded', function () {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const openFormButton = document.getElementById('openFormButton');
+            const closePopup = document.getElementById('closePopup');
+
+            // Function to open the popup
+            openFormButton.addEventListener('click', function () {
+                popupOverlay.style.display = 'block';
+            });
+
+            // Function to close the popup
+            closePopup.addEventListener('click', function () {
+                popupOverlay.style.display = 'none';
+            });
+
+            // Close the popup when clicking outside of the popup content
+            popupOverlay.addEventListener('click', function (event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

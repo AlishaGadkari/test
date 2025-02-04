@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Job Posting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f4;
+            margin: 0; /* Remove default margin */
+            display: flex;
+            flex-direction: column; /* Stack header, content, and footer vertically */
+            height: 100vh; /* Full height of the viewport */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        .header {
+            background-color: #03346E; /* Header background color */
+            color: white; /* Text color */
+            padding: 0px; /* Padding around the header */
+            text-align: center; /* Center the text */
+        }
+
+        .navbar {
+            display: flex; /* Use flexbox */
+            justify-content: flex-end; /* Align items to the right */
+            background-color: #03346E; /* Dark background */
+            width: 100%; /* Make the navbar full width */
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0px; /* Remove default margin */
+            padding: 0px; /* Remove default padding */
+            display: flex; /* Use flexbox for the list */
+            font-size: 20px;
+        }
+
+        .navbar li {
+            margin-left: 20px; /* Add space between items */
+        }
+
+        .navbar li a {
+            display: block; /* Make the link fill the list item */
+            color: white; /* Text color */
+            text-align: center; /* Center the text */
+            padding: 14px 20px; /* Add padding */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar li a:hover {
+            background-color: #ddd; /* Change background on hover */
+            color: black; /* Change text color on hover */
+        }
+
+        .content {
+            padding: 20px; /* Padding for the main content */
+            flex: 1; /* Allow content to grow and fill available space */
+            display: flex; /* Use flexbox for the content */
+            justify-content: center; /* Center the cards horizontally */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line */
+            gap: 20px; /* Space between cards */
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Corrected padding */
+            width: 80%; /* Set width to 90% */
+            max-width: 300px; /* Maximum width for each card */
+            text-align: left;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .card .no-button,
+        .card .yes-button {
+            background-color: #e31717; /* Default for no-button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Space between buttons */
+        }
+
+        .card .no-button:hover {
+            background-color: #b30000;
+        }
+
+        .card .yes-button {
+            background-color: #40e564; /* Default for yes-button */
+        }
+
+        .card .yes-button:hover {
+            background-color: #298836;
+        }
+
+        .message {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 95%; /* Adjust card width for smaller screens */
+            }
+        }
+        .footer {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Job Posting Approval</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adminlogin.html">Admin-Login</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="card">
+            <h2>House Cleaner</h2>
+            <p><strong>Description:</strong> Seeking a reliable and detail-oriented house cleaner to join our team. Candidate must be responsible and maintain a high level of cleanliness. Candidate will be cleaning, on average, 2-3 rooms.</p>
+            <p><strong>Location:</strong> 610 North Alma School Road, Buckeye, AZ 85326</p>
+            <p><strong>Pay:</strong> $18.50 - $21.50 an hour</p>
+            <p><strong>Job Type:</strong> Full Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>8 hour shifts</li>
+                <li>No weekends</li>
+                <li>No nights</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton1">Approve</a>
+            <div class="message" id="message1"></div>
+        </div>
+        <div class="card">
+            <h2>Cookie Crew</h2>
+            <p><strong>Description:</strong> Looking for a hardworking and dependable baker. No experience is needed. Must be able to work with all types of ingredients.</p>
+            <p><strong>Location:</strong> Insomnia Cookies 5020 N 35th Ave, Phoenix, AZ, 85017</p>
+            <p><strong>Pay:</strong> $15.25 an hour</p>
+            <p><strong>Job Type:</strong> Part Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>Holidays</li>
+                <li>Weekends</li>
+                <li>8 hour shifts</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton2">Approve</a>
+            <div class="message" id="message2"></div>
+        </div>
+        <div class="card">
+            <h2>Oregano's Dishwasher</h2>
+            <p><strong>Description:</strong> Seeking a hardworking and dependable dishwasher to join our team at Oregano's. The dishwasher will need to be responsible for maintaining cleanliness in the kitchen by cleaning and sanitizing dishes and equipment.</p>
+            <p><strong>Location:</strong> Oregano's Glendale, AZ 85032</p>
+            <p><strong>Pay:</strong> $17 - $19 an hour</p>
+            <p><strong>Job Type:</strong></p>
+            <ul>
+                <li>Full Time</li>
+                <li>Part Time</li>
+            </ul>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>6 hour shifts</li>
+                <li>Nights</li>
+                <li>Weekends</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton3">Approve</a>
+            <div class="message" id="message3"></div>
+        </div>
+        <div class="card">
+            <h2>Store Associate</h2>
+            <p><strong>Description:</strong> Looking for a fast learner and hardworking store member. The member must have good customer service and be willing to be part of a team.</p>
+            <p><strong>Location:</strong> CVS Health, Buckeye, AZ 85326</p>
+            <p><strong>Pay:</strong> $15- $22 an hour</p>
+            <p><strong>Job Type:</strong> Full Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>30 Hours A Week</li>
+                <li>Nights</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton4">Approve</a>
+            <div class="message" id="message4"></div>
+        </div>
+        <div class="card">
+            <h2>Chipotle Crew Member</h2>
+            <p><strong>Description:</strong> As a Chipotle team member, you will be responsible for providing exceptional customer service, preparing and serving food, maintaining cleanliness, and ensuring food safety standards.</p>
+            <p><strong>Location:</strong> Chipotle 100 E Camelback Rd, Phoenix, AZ 85012</p>
+            <p><strong>Pay:</strong> $15 an hour</p>
+            <p><strong>Job Type:</strong> Part Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>6 hour shifts</li>
+                <li>Weekends</li>
+                <li>Liable to change hours</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton5">Approve</a>
+            <div class="message" id="message5"></div>
+        </div>
+        <div class="card">
+            <h2>Raising Cane's Crew Member</h2>
+            <p><strong>Description:</strong> As a Crew Member at Raising Canes, you will provide excellent customer service, prepare and serve food, and maintain a clean and organized restaurant. You’ll work as part of a team to ensure a fast, friendly, and efficient dining experience for every guest.</p>
+            <p><strong>Location:</strong> Raising Cane's 710 East Indian School Road, Phoenix, AZ 85014</p>
+            <p><strong>Pay:</strong> $15.50 - $16.50 an hour</p>
+            <p><strong>Job Type:</strong> Full Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>25-30 hours a week</li>
+                <li>No weekends</li>
+            </ul>
+            <a href="#" class="no-button">Deny</a>
+            <a href="#" class="yes-button" id="approveButton6">Approve</a>
+            <div class="message" id="message6"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy;CareerMatch. All rights reserved.</p>
+            <br>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // Select all approve buttons
+        const approveButtons = document.querySelectorAll('.yes-button');
+
+        // Add click event listener to each approve button
+        approveButtons.forEach((button, index) => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                const messageId = `message${index + 1}`; // Construct message ID
+                document.getElementById(messageId).innerText = `Approval for ${this.closest('.card').querySelector('h2').innerText} has been granted!`;
+            });
+        });
+
+        // Select all deny buttons
+        const denyButtons = document.querySelectorAll('.no-button');
+
+        // Add click event listener to each deny button
+        denyButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                // Find the closest card element and remove it
+                const card = this.closest('.card');
+                if (card) {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

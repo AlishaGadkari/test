@@ -1,0 +1,172 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Match</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+h1{
+    color: white;
+}
+.header {
+    padding-top: 20px; /* Optional: Add padding to the header */
+    padding-bottom: 0px;
+    background-color: #03346E; /* Optional: Background color for the header */
+    text-align: center; /* Center the header text */
+}
+
+.navbar {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #03346E; /* Dark background */
+    width: 100%; /* Make the navbar full width */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0px; /* Remove default padding */
+    display: flex; /* Use flexbox for the list */
+    font-size: 20px;
+}
+
+.navbar li {
+    margin-left: 20px; /* Add space between items */
+}
+
+.navbar li a {
+    display: block; /* Make the link fill the list item */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar li a:hover {
+    background-color: #ddd; /* Change background on hover */
+    color: black; /* Change text color on hover */
+}
+
+.image-text-block {
+    display: flex; /* Use flexbox to align items */
+    height: 400px; /* Set a height for the block */
+}
+
+.image-container {
+    flex: 1; /* Take up half of the block */
+    overflow: hidden; /* Hide overflow */
+}
+
+.image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    flex: 1; /* Take up half of the block */
+    padding: 20px; /* Add padding */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    background-color: #f9f9f9; /* Optional: Background color for text */
+}
+
+
+.text-container{
+    font-size:20px
+}
+h2{
+    text-align: center;
+    font-size:30px
+}
+.footer {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<body>
+    <div class="header">
+        <h1> About CareerMatch</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adminlogin.html">Admin-Login</a></li>
+        </ul>
+    </nav>
+    <br>
+    
+    <div class="content">
+        <div class="image-text-block">
+            <div class="image-container">
+                <img src="images/hands2.jpg" alt="Description of image">
+            </div>
+            <div class="text-container">
+                <h2>What is CareerMatch?</h2>
+                <br>
+                <p>Career Match connects students with employers to simplify the job and internship search. It helps students find opportunities that match their skills and career goals while allowing employers to easily discover and engage with talented candidates.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; CareerMatch. All rights reserved.</p>
+            <br>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+

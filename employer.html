@@ -1,0 +1,303 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Match</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+   
+}
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for the body */
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    background-color: #03346E;
+    color: aliceblue;
+    padding: 10px;
+  
+}
+.navbar {
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+    background-color: #03346E; /* Dark background */
+    width: 100%; /* Make the navbar full width */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for the list */
+    font-size: 20px;
+}
+
+.navbar li {
+    margin-left: 20px; /* Add space between items */
+}
+
+.navbar li a {
+    display: block; /* Make the link fill the list item */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar li a:hover {
+    background-color: #ddd; /* Change background on hover */
+    color: black; /* Change text color on hover */
+}
+
+.login-container {
+    background-color: white; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Position relative for vertical centering */
+    top: 40%; /* Move down 40% of the viewport height */
+    transform: translateY(-50%); /* Move up by half of the form's height */
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input {
+    width: 90%; /* Set width to auto to align left */
+    padding: 20px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    display: block; /* Make inputs block elements */
+
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #608BC1; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size:15px;
+
+}
+
+
+button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+#message {
+    margin-top: 10px; /* Space above message */
+    color: red; /* Message color */
+}
+#newaccountlink{
+    text-align: center;
+}body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for the body */
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0; /* Light background color */
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    background-color: #03346E;
+    color: aliceblue;
+    padding: 40px;
+    margin: -10px;
+}
+
+.login-container {
+    background-color: white; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Position relative for vertical centering */
+    top: 40%; /* Move down 40% of the viewport height */
+    transform: translateY(-50%); /* Move up by half of the form's height */
+    margin-bottom: 60px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input {
+    width: 90%; /* Set width to auto to align left */
+    padding: 20px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners for inputs */
+    display: block; /* Make inputs block elements */
+
+}
+
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #608BC1; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size:15px;
+
+}
+
+
+button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+#message {
+    margin-top: 10px; /* Space above message */
+    color: red; /* Message color */
+}
+#newaccountlink{
+    text-align: center;
+}
+.footer {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+</style>
+<body>
+    
+    <div class="header">
+        <h1> Login to CareerMatch</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adminlogin.html">Admin-Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="login-container">
+        <h2>Employer Login</h2>
+        <form id="employerlogin">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <a href="employernewaccount.html" style="display: block; text-align: center; margin-bottom: 10px;">Create Account</a>
+            <button type="submit">Login</button>
+        </form>
+        <div id="message"></div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; CareerMatch. All rights reserved.</p>
+                <br>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        <script>
+            // Pre-set credentials (change these to your actual credentials)
+            const PRESET_PASSWORD = "123cookies"; // Change this to your actual password
+            const PRESET_USERNAME = "cookiecrew@gmail.com"; // Change this to your actual username
+    
+            // Function to handle form submission
+            document.getElementById('employerlogin').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+    
+                const usernameInput = document.getElementById('username').value; // Get the username input value
+                const passwordInput = document.getElementById('password').value; // Get the password input value
+    
+                // Check if the entered username and password match the pre-set credentials
+                if (usernameInput === PRESET_USERNAME && passwordInput === PRESET_PASSWORD) {
+                    document.getElementById('message').innerText = "Login Successful!";
+                    // Redirect to another page on successful login
+                    window.location.href = "employerjobposting.html"; // Change this to your desired page
+                } else {
+                    document.getElementById('message').innerText = "Login Failed! Incorrect Username or Password.";
+                }
+            });
+        </script>
+    </body>
+    </html>
+
+
+
+

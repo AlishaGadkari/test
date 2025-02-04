@@ -1,0 +1,243 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Match</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+    font-size: 40px;
+    background-color: #03346E;
+    color: aliceblue;
+    padding: 20px;
+    margin: -10px;
+    text-align: center;
+}
+        .navbar {
+            display: flex; /* Use flexbox */
+            justify-content: flex-end; /* Align items to the right */
+            background-color: #03346E; /* Dark background */
+            width: 100%; /* Make the navbar full width */
+        }
+
+        .navbar ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for the list */
+            font-size: 20px;
+        }
+
+        .navbar li {
+            margin-left: 20px; /* Add space between items */
+        }
+
+        .navbar li a {
+            display: block; /* Make the link fill the list item */
+            color: white; /* Text color */
+            text-align: center; /* Center the text */
+            padding: 14px 20px; /* Add padding */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar li a:hover {
+            background-color: #ddd; /* Change background on hover */
+            color: black; /* Change text color on hover */
+        }
+
+        .content {
+            padding: 20px; /* Padding for the main content */
+            flex: 1; /* Allow content to grow and fill available space */
+            display: flex; /* Use flexbox for the content */            
+            justify-content: center; /* Center the cards horizontally */
+            flex-wrap: wrap; /* Allow cards to wrap to the next line */
+            gap: 20px; /* Space between cards */
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Corrected padding */
+            width: 80%; /* Set width to 90% */
+            max-width: 300px; /* Maximum width for each card */
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .match-button {
+            background-color: #6484f8; /* Default for no-button */
+            color: white;
+            border: none;
+            margin: 20px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Space between buttons */
+        }
+
+        .message {
+            display: none; /* Initially hide the message */
+            margin-top: 10px;
+            color: blue;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 95%; /* Adjust card width for smaller screens */
+            }
+        }
+    h3{
+        text-align: center;
+        font-size: 30px;
+    }
+    .footer {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+
+<div class="header">
+        <h1> Welcome Back Alisha!</h1>
+    </div>
+   
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="adminlogin.html">Admin-Login</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h3>Available Job Postings</h3>
+
+    <main class="content">
+        <div class="card">
+            <h2>Cookie Crew</h2>
+            <p><strong>Description:</strong> Looking for a hardworking and dependable baker. No experience is needed. Must be able to work with all types of ingredients.</p>
+            <p><strong>Location:</strong> Insomnia Cookies 5020 N 35th Ave, Phoenix, AZ, 85017</p>
+            <p><strong>Pay:</strong> $15.25 an hour</p>
+            <p><strong>Job Type:</strong> Part Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>Holidays</li>
+                <li>Weekends</li>
+                <li>8 hour shifts</li>
+            </ul>
+            <button class="match-button">Match and Apply Now</button>
+            <div class="message">Application Sent!</div>
+        </div>
+        <div class="card">
+            <h2>Store Associate</h2>
+            <p><strong>Description:</strong> Looking for a fast learner and hardworking store member. The member must have good customer service and be willing to be part of a team.</p>
+            <p><strong>Location:</strong> CVS Health, Buckeye, AZ 85326</p>
+            <p><strong>Pay:</strong> $15- $22 an hour</p>
+            <p><strong>Job Type:</strong> Full Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>30 Hours A Week</li>
+                <li>Nights</li>
+            </ul>
+            <button class="match-button">Match and Apply Now</button>
+            <div class="message">Application Sent!</div>
+        </div>
+        <div class="card">
+            <h2>Raising Cane's Crew Member</h2>
+            <p><strong>Description:</strong> As a Crew Member at Raising Canes, you will provide excellent customer service, prepare and serve food, and maintain a clean and organized restaurant.</p>
+            <p><strong>Location:</strong> Raising Cane's 710 East Indian School Road, Phoenix, AZ 85014</p>
+            <p><strong>Pay:</strong> $15.50 - $16.50 an hour</p>
+            <p><strong>Job Type:</strong> Full Time</p>
+            <p><strong>Shift and Schedule:</strong></p>
+            <ul>
+                <li>25-30 hours a week</li>
+                <li>No weekends</li>
+            </ul>
+            <button class="match-button">Match and Apply Now</button>
+            <div class="message">Application Sent!</div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; CareerMatch. All rights reserved.</p>
+            <br>
+            <ul class="social-links">
+                <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        // Select all buttons with the class 'match-button'
+        const buttons = document.querySelectorAll('.match-button');
+
+        // Loop through each button and add a click event listener
+        buttons.forEach((button) => {
+            button.addEventListener('click', function() {
+                // Find the corresponding message div
+                const message = this.nextElementSibling;
+                // Show the message when the button is clicked
+                message.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
