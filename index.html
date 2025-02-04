@@ -60,35 +60,32 @@ h1{
 }
 
 
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between rectangles */
+}
 
-.rounded-rectangle {
+.rounded-rectangle, .rounded-rectangle2 {
     width: 800px; /* Width of the rectangle */
     height: 300px; /* Height of the rectangle */
     background-color: #03346E; /* Color of the rectangle */
     border-radius: 200px; /* Rounded ends */
-    position: relative; /* Positioning context */
-    align-self:center; /* Move it to the right */
-    margin-top: 50px;
-    transform: translateX(-50%); /* Center it horizontally */
-    margin-left: -200px; /* Move it left by half its width to show only half */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
     padding: 20px; /* Add some padding */
     box-sizing: border-box; /* Include padding in width/height */
 }
 
-.student-image {
+.student-image, .employer-image {
     width: 270px; /* Set image width */
     height: 270px; /* Set image height to match width for a circle */
     border-radius: 50%; /* Make the image circular */
-    position: absolute; /* Position the image absolutely */
-    right: 10px; /* Move the image to the left to align with the rounded corner */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust for the height of the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
-.student-login{
+.student-login, .employer-login {
     display: inline-block;
     padding: 20px 30px;
     font-size: 25px;
@@ -97,59 +94,10 @@ h1{
     text-decoration: none; /* Remove underline */
     border-radius: 30px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth transition */
-    margin-left: 270px;
+    margin-left: 20px; /* Space between image and button */
 }
 
-
-.student-login:hover {
-    background-color: #6a94c433; /* Light hover effect */
-}
-
-
-
-
-.rounded-rectangle2{
-    width: 800px; /* Width of the rectangle */
-    height: 295px; /* Height of the rectangle */
-    background-color: #03346E; /* Color of the rectangle */
-    border-radius: 200px; /* Rounded ends */
-    position: relative; /* Positioning context */
-    align-self:center; /* Move it to the right */
-    margin-top: -295px;
-    transform: translateX(-50%); /* Center it horizontally */
-    margin-left: 700px; /* Move it left by half its width to show only half */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Add some padding */
-    box-sizing: border-box; /* Include padding in width/height */
-    
-    }
-
-.employer-image {
-    width: 250px; /* Set image width */
-    height: 250px; /* Set image height to match width for a circle */
-    border-radius: 50%; /* Make the image circular */
-    position: absolute; /* Position the image absolutely */
-    left: 10px; /* Move the image to the left to align with the rounded corner */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust for the height of the image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-}
-
-.employer-login{
-    display: inline-block;
-    padding: 20px 30px;
-    font-size:25px;
-    color: white;
-    background-color: #608BC1; /* Bootstrap primary color */
-    text-decoration: none; /* Remove underline */
-    border-radius: 30px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-    margin-left: 300px;
-}
-
-
-.employer-login:hover {
+.student-login:hover, .employer-login:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
 }
 
@@ -210,18 +158,15 @@ margin: 0 auto; /* Center the container */
             <li><a href="adminlogin.html">Admin-Login</a></li>
         </ul>
     </nav>
-   
-    <div class="rounded-rectangle">
-    <img src="student.jpg" 
-    alt="image of a student" class="student-image">
-    <a href="student.html" class="student-login">Student Login </a>
-    </div>
-    <br>
-    <div>class="rounded-rectangle2">
-    <img src="images/employer 3.jpg" 
-    alt="image of a student" class="employer-image">
-    
-    <a href="employer.html" class="employer-login" >Employer Login </a>
+     <div class="container">
+        <div class="rounded-rectangle">
+            <img src="student.jpg" alt="image of a student" class="student-image">
+            <a href="student.html" class="student-login">Student Login</a>
+        </div>
+        <div class="rounded-rectangle2">
+            <img src="images/employer 3.jpg" alt="image of an employer" class="employer-image">
+            <a href="employer.html" class="employer-login">Employer Login</a>
+        </div>
     </div>
     <br>
     <br>
