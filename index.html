@@ -62,10 +62,10 @@ h1{
 
 
 .container {
-   display: grid;               /* Enable grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 10px;                  /* Space between cards */
-    padding: 10px;              
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    gap: 20px;             
 }
 
 .card {
